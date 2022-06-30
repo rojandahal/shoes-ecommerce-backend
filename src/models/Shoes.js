@@ -52,6 +52,10 @@ const ShoesSchema = new mongoose.Schema({
       enum: ['male','female','unisex'],
       required: true
     },
+    discount: {
+        type: Number,
+        default: 0
+    },
     uploadedBy: {
         type: mongoose.Schema.ObjectId,
         ref: 'Users',
