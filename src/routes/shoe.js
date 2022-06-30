@@ -21,8 +21,7 @@ const Shoe = require('../models/Shoes');
 
 router
     .route('/')
-    .get(protect,authorization('user','admin'),
-    advanceResults(Shoe, ''), getShoes)
+    .get(advanceResults(Shoe, ''), getShoes)
     .post(protect, authorization('admin'), createShoe)
 
 router
