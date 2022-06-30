@@ -42,6 +42,11 @@ const ShoesSchema = new mongoose.Schema({
         type: String,
         default: 'no-photo.jpg'
     },
+    description: {
+        type: String,
+        default: 'No Description',
+        required: true
+    },
     uploadedBy: {
         type: mongoose.Schema.ObjectId,
         ref: 'Users',
