@@ -24,9 +24,9 @@ const userRoutes = require('./src/routes/users');
 const authRoutes = require('./src/routes/auth');
 
 app.use((req,res,next)=>{
-    res.setHeader('Access-Control-Allow-Origin',['http://localhost:3000']);
+    res.setHeader('Access-Control-Allow-Origin',['http://localhost:3000', '*']);
     res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
-    res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization', 'Origin', 'X-Requested-With', 'Accept');
+    res.setHeader('Access-Control-Allow-Methods','Content-Type Authorization Origin X-Requested-With Accept');
     next(); 
 })
 
